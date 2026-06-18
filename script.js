@@ -18,3 +18,9 @@ hero.style.backgroundImage =
 `linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url(${images[current]})`;
 
 }, 5000);
+function topFunction(){
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+}
