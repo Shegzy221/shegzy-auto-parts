@@ -1,24 +1,129 @@
-// Automatic background image slider
-const hero = document.querySelector(".hero");
-
-const images = [
-"https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1400&q=80",
-
-"https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1400&q=80",
-
-"https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1400&q=80"
-];
-
-let current = 0;
-
-function changeBackground() {
-current++;
-if(current >= images.length){
-current = 0;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
-hero.style.backgroundImage =
-`linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url(${images[current]})`;
+body{
+background:#111;
+color:white;
 }
 
-setInterval(changeBackground,5000);
+header{
+background:#000;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+}
+
+.hero{
+height:100vh;
+background:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1600') center/cover;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.overlay{
+background:rgba(0,0,0,.6);
+padding:40px;
+border-radius:10px;
+}
+
+.btn{
+background:red;
+color:white;
+padding:15px 30px;
+text-decoration:none;
+display:inline-block;
+margin-top:20px;
+border-radius:5px;
+}
+
+.counter{
+display:flex;
+justify-content:space-around;
+padding:50px;
+background:#1b1b1b;
+}
+
+.box{
+text-align:center;
+}
+
+#services{
+padding:70px 20px;
+text-align:center;
+}
+
+.services-container{
+display:flex;
+justify-content:center;
+gap:30px;
+margin-top:30px;
+flex-wrap:wrap;
+}
+
+.service{
+background:#222;
+padding:25px;
+border-radius:10px;
+width:250px;
+}
+
+.products{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+padding:50px;
+}
+
+.card{
+background:#222;
+padding:20px;
+border-radius:10px;
+width:300px;
+text-align:center;
+}
+
+.card img{
+width:100%;
+border-radius:10px;
+}
+
+.testimonials{
+padding:70px;
+text-align:center;
+background:#1b1b1b;
+}
+
+#contact{
+padding:70px;
+text-align:center;
+}
+
+.whatsapp{
+background:#25D366;
+padding:15px 25px;
+text-decoration:none;
+color:white;
+border-radius:10px;
+display:inline-block;
+margin-top:20px;
+}
+
+footer{
+background:black;
+padding:20px;
+text-align:center;
+}
