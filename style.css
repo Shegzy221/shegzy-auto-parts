@@ -175,3 +175,31 @@ background-position:center;
 transition:1s;
 color:white;
 }
+.stats{
+display:flex;
+justify-content:center;
+gap:40px;
+padding:80px 20px;
+background:#111;
+color:white;
+flex-wrap:wrap;
+}
+
+.stat-box{
+background:#1a1a1a;
+padding:30px;
+border-radius:15px;
+text-align:center;
+width:220px;
+box-shadow:0 0 20px rgba(255,0,0,.3);
+transition:.5s;
+}
+
+.stat-box:hover{
+transform:translateY(-10px);
+}
+
+.stat-box h2{
+color:red;
+font-size:40px;
+}
