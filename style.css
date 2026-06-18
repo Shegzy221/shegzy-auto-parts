@@ -402,3 +402,12 @@ color:white;
 font-size:25px;
 cursor:pointer;
 }
+.logo h1{
+color:red;
+font-size:35px;
+}
+
+.logo p{
+font-size:14px;
+color:#ccc;
+}
