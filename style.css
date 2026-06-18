@@ -241,3 +241,27 @@ margin-top:15px;
 .card p{
 padding:15px;
 }
+.reviews{
+padding:80px 20px;
+background:#000;
+color:white;
+text-align:center;
+}
+
+.review-box{
+max-width:700px;
+margin:20px auto;
+background:#1a1a1a;
+padding:30px;
+border-radius:15px;
+box-shadow:0 0 20px rgba(255,0,0,.4);
+transition:.5s;
+}
+
+.review-box:hover{
+transform:scale(1.03);
+}
+
+.review-box h4{
+color:red;
+}
