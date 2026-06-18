@@ -144,7 +144,19 @@ text-decoration:none;
 box-shadow:0 0 20px rgba(0,0,0,.4);
 z-index:1000;
 }
+.search{
+width:70%;
+padding:15px;
+border:none;
+border-radius:10px;
+font-size:18px;
+margin:30px;
+}
 
+.search:focus{
+outline:none;
+box-shadow:0 0 10px red;
+}
 .float-whatsapp:hover{
 transform:scale(1.1);
 transition:.3s;
