@@ -1,154 +1,184 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shegzy Auto Parts & Mechanical Services</title>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+scroll-behavior:smooth;
+}
 
-<link rel="stylesheet" href="style.css">
+body{
+background:#0f0f0f;
+color:white;
+}
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
+header{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:rgba(0,0,0,.9);
+z-index:1000;
+}
 
-<body>
+.logo h1{
+color:red;
+font-size:32px;
+}
 
-<header>
-<div class="logo">
-<h1>SHEGZY AUTO PARTS</h1>
-<p>Quality Parts • Expert Mechanics</p>
-</div>
+.logo p{
+font-size:14px;
+color:#ccc;
+}
 
-<nav>
-<a href="#home">Home</a>
-<a href="#services">Services</a>
-<a href="#products">Products</a>
-<a href="#contact">Contact</a>
-</nav>
-</header>
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+transition:.3s;
+}
 
-<section class="hero" id="home">
+nav a:hover{
+color:red;
+}
 
-<div class="overlay">
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d3?w=1600");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
 
-<h1>Quality Car Parts & Professional Auto Services</h1>
+.overlay h1{
+font-size:60px;
+margin-bottom:20px;
+}
 
-<p>
-Genuine Parts • Fast Delivery • Expert Mechanics
-</p>
+.overlay p{
+font-size:22px;
+margin-bottom:30px;
+}
 
-<a href="https://wa.me/2348142304388" class="btn">
-Order Parts
-</a>
+.btn,.btn2{
+display:inline-block;
+padding:15px 30px;
+border-radius:8px;
+text-decoration:none;
+margin:10px;
+transition:.3s;
+}
 
-<a href="#services" class="btn2">
-Book Repair
-</a>
+.btn{
+background:red;
+color:white;
+}
 
-</div>
+.btn2{
+border:2px solid red;
+color:white;
+}
 
-</section>
+.btn:hover{
+transform:scale(1.05);
+}
 
-<section class="stats">
+.btn2:hover{
+background:red;
+}
 
-<div class="stat-box">
-<h2>500+</h2>
-<p>Happy Customers</p>
-</div>
+.stats{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+padding:80px 20px;
+background:#111;
+}
 
-<div class="stat-box">
-<h2>3000+</h2>
-<p>Parts Sold</p>
-</div>
+.stat-box{
+background:#1a1a1a;
+padding:30px;
+width:250px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 0 20px rgba(255,0,0,.2);
+}
 
-<div class="stat-box">
-<h2>10+</h2>
-<p>Years Experience</p>
-</div>
+.stat-box h2{
+color:red;
+font-size:45px;
+}
 
-</section>
+.services,
+.products,
+.reviews,
+.contact-section{
+padding:90px 8%;
+text-align:center;
+}
 
-<section class="services" id="services">
+.service-box,
+.card,
+.review-box{
+background:#1a1a1a;
+padding:30px;
+border-radius:20px;
+margin:20px auto;
+max-width:700px;
+box-shadow:0 0 20px rgba(255,0,0,.15);
+transition:.3s;
+}
 
-<h2>Our Services</h2>
+.service-box:hover,
+.card:hover,
+.review-box:hover{
+transform:translateY(-10px);
+}
 
-<div class="service-box">
-<h3>🔧 Engine Repairs</h3>
-<p>Professional engine repair services.</p>
-</div>
+.product-grid{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
 
-<div class="service-box">
-<h3>🛠 Brake Services</h3>
-<p>Brake pad replacement and maintenance.</p>
-</div>
+.card{
+width:300px;
+}
 
-<div class="service-box">
-<h3>⚙ Suspension Repairs</h3>
-<p>Shock absorbers and suspension work.</p>
-</div>
+footer{
+background:black;
+padding:50px;
+text-align:center;
+color:#ccc;
+}
 
-<div class="service-box">
-<h3>🚗 General Maintenance</h3>
-<p>Oil change and vehicle servicing.</p>
-</div>
+@media(max-width:768px){
 
-</section>
+header{
+flex-direction:column;
+}
 
-<section class="products" id="products">
+.overlay h1{
+font-size:40px;
+}
 
-<h2>Featured Products</h2>
+nav{
+margin-top:15px;
+}
 
-<div class="product-grid">
+.stats{
+flex-direction:column;
+align-items:center;
+}
 
-<div class="card">
-<h3>Brake Pads</h3>
-</div>
-
-<div class="card">
-<h3>Engine Oil</h3>
-</div>
-
-<div class="card">
-<h3>Toyota Parts</h3>
-</div>
-
-</div>
-
-</section>
-
-<section class="reviews">
-
-<h2>Customer Reviews</h2>
-
-<div class="review-box">
-⭐⭐⭐⭐⭐
-<p>Excellent service and quality parts.</p>
-<h4>— Michael A.</h4>
-</div>
-
-</section>
-
-<section class="contact-section" id="contact">
-
-<h2>Contact Us</h2>
-
-<p>📞 08142304388</p>
-
-<p>📧 seguntemitope2003@gmail.com</p>
-
-</section>
-
-<footer>
-
-<h2>Shegzy Auto Parts & Mechanical Services</h2>
-
-<p>Nationwide Delivery Across Nigeria</p>
-
-<p>© 2026 All Rights Reserved</p>
-
-</footer>
-
-<script src="script.js"></script>
-
-</body>
-</html>
+}
