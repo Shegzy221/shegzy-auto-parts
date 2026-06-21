@@ -25,3 +25,32 @@ hero.style.backgroundImage =
 url(${images[current]})`;
 
 },4000);
+function searchProducts(){
+let input =
+document.getElementById("searchInput").value.toUpperCase();
+
+let cards =
+document.querySelectorAll(".card");
+
+cards.forEach(card=>{
+
+let title =
+card.querySelector("h3");
+
+if(title){
+
+if(title.innerText.toUpperCase().indexOf(input)>-1){
+
+card.style.display="block";
+
+}else{
+
+card.style.display="none";
+
+}
+
+}
+
+});
+
+}
