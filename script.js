@@ -54,3 +54,9 @@ card.style.display="none";
 });
 
 }
+window.addEventListener("load",()=>{
+
+document.getElementById("loader")
+.style.display="none";
+
+});
