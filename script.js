@@ -1,13 +1,10 @@
+// Hero background slider
 const hero = document.querySelector(".hero");
 
 const images = [
-
 "https://images.unsplash.com/photo-1492144534655-ae79c964c9d3?w=1600",
-
 "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1600",
-
 "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=1600"
-
 ];
 
 let current = 0;
@@ -21,42 +18,48 @@ current = 0;
 }
 
 hero.style.backgroundImage =
-`linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+`linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
 url(${images[current]})`;
 
-},4000);
-function searchProducts(){
-let input =
-document.getElementById("searchInput").value.toUpperCase();
+},5000);
 
-let cards =
-document.querySelectorAll(".card");
 
-cards.forEach(card=>{
+// Animated counters
+const counters = document.querySelectorAll(".stat-box h2");
 
-let title =
-card.querySelector("h3");
+counters.forEach(counter=>{
 
-if(title){
+const updateCounter=()=>{
 
-if(title.innerText.toUpperCase().indexOf(input)>-1){
+const target =
+parseInt(counter.innerText);
 
-card.style.display="block";
+let currentValue =
+parseInt(counter.getAttribute("data-count")) || 0;
+
+const increment =
+Math.ceil(target/100);
+
+if(currentValue < target){
+
+currentValue += increment;
+
+counter.setAttribute("data-count",currentValue);
+
+counter.innerText =
+currentValue + "+";
+
+setTimeout(updateCounter,30);
 
 }else{
 
-card.style.display="none";
+counter.innerText =
+target + "+";
 
 }
 
-}
+};
 
-});
-
-}
-window.addEventListener("load",()=>{
-
-document.getElementById("loader")
-.style.display="none";
+updateCounter();
 
 });
