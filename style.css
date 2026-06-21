@@ -442,3 +442,31 @@ background:#1a1a1a;
 border-radius:20px;
 box-shadow:0 0 20px rgba(255,0,0,.3);
 }
+.btn{
+background:red;
+color:white;
+padding:15px 30px;
+text-decoration:none;
+border-radius:8px;
+margin:10px;
+display:inline-block;
+}
+
+.btn2{
+background:black;
+color:white;
+padding:15px 30px;
+text-decoration:none;
+border:2px solid red;
+border-radius:8px;
+display:inline-block;
+}
+
+.btn:hover{
+transform:scale(1.05);
+transition:.3s;
+}
+
+.btn2:hover{
+background:red;
+}
